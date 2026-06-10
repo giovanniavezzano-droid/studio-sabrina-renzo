@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr.ssa Sabrina Renzo — Studio Odontoiatrico · Agliana (PT)</title>
 <meta name="description" content="Studio Odontoiatrico Dr.ssa Sabrina Renzo, a Ferruccia di Agliana (PT). Il mio impegno, il tuo sorriso: un dentista di fiducia che ti conosce e ti ascolta. Prevenzione, ortodonzia, implantologia, protesi e odontoiatria infantile. Prime visite e preventivi gratuiti.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --teal:#6e9c9b;
@@ -23,8 +20,8 @@
     --line:#e4eceb;
     --shadow:0 14px 38px rgba(58,94,93,.13);
     --radius:16px;
-    --serif:'Cormorant Garamond',Georgia,serif;
-    --caps:'Jost',-apple-system,sans-serif;
+    --serif:'Palatino Linotype','Book Antiqua',Palatino,Georgia,'Times New Roman',serif;
+    --caps:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -34,33 +31,34 @@
   img{display:block;max-width:100%}
   .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
   section{padding:84px 0}
-  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;letter-spacing:.005em;color:var(--charcoal)}
-  .eyebrow{font-family:var(--caps);color:var(--teal-dark);font-weight:500;text-transform:uppercase;letter-spacing:.22em;font-size:.74rem}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.14;letter-spacing:.005em;color:var(--charcoal)}
+  .eyebrow{font-family:var(--caps);color:var(--teal-dark);font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:.74rem}
   .lead{color:var(--muted);font-size:1.08rem;max-width:640px}
 
-  /* Header */
-  header{position:sticky;top:0;z-index:50;background:rgba(248,250,250,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  header{position:sticky;top:0;z-index:50;background:rgba(248,250,250,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:94px}
   .brand{display:flex;align-items:center;gap:14px}
   .brand img{height:70px;width:auto}
-  .brand .wm b{display:block;font-family:var(--serif);font-weight:600;font-size:1.18rem;color:var(--charcoal);line-height:1;letter-spacing:.03em}
-  .brand .wm span{font-family:var(--caps);font-size:.62rem;color:var(--teal-dark);letter-spacing:.26em;text-transform:uppercase}
+  .brand .wm b{display:block;font-family:var(--serif);font-weight:600;font-size:1.18rem;color:var(--charcoal);line-height:1;letter-spacing:.02em}
+  .brand .wm span{font-family:var(--caps);font-size:.62rem;color:var(--teal-dark);letter-spacing:.24em;text-transform:uppercase}
   .menu{display:flex;gap:28px;align-items:center}
-  .menu a{font-family:var(--caps);color:var(--charcoal);font-weight:400;font-size:.86rem;letter-spacing:.06em;transition:color .2s}
+  .menu a{font-family:var(--caps);color:var(--charcoal);font-weight:500;font-size:.86rem;letter-spacing:.04em;transition:color .2s}
   .menu a:hover{color:var(--teal-dark)}
-  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;padding:12px 22px;border-radius:999px;font-family:var(--caps);font-weight:500;letter-spacing:.05em;transition:background .2s,transform .15s;border:none;cursor:pointer;font-size:.86rem}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;padding:12px 22px;border-radius:999px;font-family:var(--caps);font-weight:600;letter-spacing:.03em;transition:background .2s,transform .15s;border:none;cursor:pointer;font-size:.86rem}
   .btn:hover{background:var(--teal-dark);transform:translateY(-1px)}
   .btn.ghost{background:transparent;color:var(--teal-dark);border:1.5px solid var(--teal)}
   .btn.ghost:hover{background:var(--teal);color:#fff}
   .burger{display:none;font-size:1.6rem;background:none;border:none;cursor:pointer;color:var(--charcoal)}
 
-  /* Hero */
   .hero{padding-top:64px}
   .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center}
-  .hero h1{font-size:clamp(2.4rem,5vw,3.7rem);margin-bottom:18px;font-weight:600}
+  .hero h1{font-size:clamp(2.4rem,5vw,3.6rem);margin-bottom:18px;font-weight:600}
   .hero h1 em{font-style:italic;color:var(--teal-dark)}
   .hero p{margin-bottom:28px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .badges{display:flex;gap:32px;margin-top:34px;flex-wrap:wrap}
+  .badge b{display:block;font-family:var(--serif);font-size:1.9rem;color:var(--teal-dark);line-height:1}
+  .badge span{color:var(--muted);font-size:.84rem}
   .hero-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:34px}
   .hero-card .hc-stars{color:#d7a85a;font-size:1.6rem;letter-spacing:3px}
   .hero-card .hc-rate{font-family:var(--caps);color:var(--muted);font-size:.9rem;margin-top:4px;letter-spacing:.04em}
@@ -68,17 +66,12 @@
   .hero-card .hc-item{display:flex;gap:11px;align-items:flex-start;color:var(--ink);font-size:1rem;margin-bottom:13px;line-height:1.5}
   .hero-card .hc-item::before{content:"✓";color:var(--teal);font-weight:800;flex:none}
   .hero-card .btn{margin-top:10px;width:100%;justify-content:center;font-size:.95rem}
-  .badges{display:flex;gap:32px;margin-top:34px;flex-wrap:wrap}
-  .badge b{display:block;font-family:var(--serif);font-size:1.9rem;color:var(--teal-dark);line-height:1}
-  .badge span{color:var(--muted);font-size:.84rem}
 
-  /* Payoff banner */
   .banner{background:var(--teal-deep);color:#fff;text-align:center;padding:18px 24px}
   .banner .pay{font-family:var(--serif);font-style:italic;font-size:1.5rem;display:block;margin-bottom:3px}
   .banner small{font-family:var(--caps);letter-spacing:.12em;text-transform:uppercase;font-size:.74rem;opacity:.92}
   .banner b{color:#fff}
 
-  /* Sections */
   .alt{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   h2.sec{font-size:2.3rem;margin-top:8px;font-weight:600}
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px}
@@ -90,24 +83,21 @@
   .card h3{font-size:1.32rem;margin-bottom:7px;font-weight:600}
   .card p{color:var(--muted);font-size:.95rem}
 
-  /* About */
   .about-grid{max-width:860px}
   .checklist{list-style:none;margin-top:24px;display:grid;gap:14px}
   .checklist li{display:flex;gap:13px;align-items:flex-start;color:var(--muted)}
   .checklist li b{color:var(--ink)}
-  .checklist li::before{content:"";width:20px;height:20px;flex:none;margin-top:3px;background:var(--teal);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat}
+  .checklist li::before{content:"✓";color:var(--teal);font-weight:800;flex:none}
 
-  /* Reviews */
   .rev-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:14px}
-  .rev-pill{background:var(--soft);color:var(--teal-deep);font-family:var(--caps);font-weight:500;padding:8px 16px;border-radius:999px;font-size:.86rem;letter-spacing:.04em;display:inline-flex;align-items:center;gap:8px}
-  .quote{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px;position:relative}
+  .rev-pill{background:var(--soft);color:var(--teal-deep);font-family:var(--caps);font-weight:600;padding:8px 16px;border-radius:999px;font-size:.86rem;letter-spacing:.03em;display:inline-flex;align-items:center;gap:8px}
+  .quote{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
   .alt .quote{background:var(--soft2)}
   .quote .mk{font-family:var(--serif);font-size:3rem;color:var(--teal);line-height:.6;opacity:.4}
   .stars{color:#d7a85a;margin:6px 0 10px;letter-spacing:2px}
   .quote p{font-size:.97rem;margin-bottom:14px;color:var(--ink)}
-  .quote .who{font-family:var(--caps);font-weight:500;font-size:.82rem;color:var(--teal-dark);letter-spacing:.06em;text-transform:uppercase}
+  .quote .who{font-family:var(--caps);font-weight:600;font-size:.82rem;color:var(--teal-dark);letter-spacing:.05em;text-transform:uppercase}
 
-  /* Contact */
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
   .info-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
   .info-row .ico{width:44px;height:44px;border-radius:12px;background:var(--soft);display:grid;place-items:center;color:var(--teal-dark);flex:none}
@@ -121,27 +111,32 @@
   .hours .day{color:var(--muted)}
   .hours .closed{color:#b5615e;font-weight:600}
   .map{border:0;width:100%;height:300px;border-radius:var(--radius);box-shadow:var(--shadow);margin-top:8px}
+  .mapph{height:300px;margin-top:8px;border:1px dashed #c7dad8;border-radius:var(--radius);background:var(--soft2);display:flex;align-items:center;justify-content:center;text-align:center;padding:26px}
+  .mapph p{color:var(--muted);font-size:.95rem;margin-bottom:14px;max-width:340px}
 
-  /* Footer */
   footer{background:var(--charcoal);color:#c4d2d1;padding:54px 0 28px}
   .foot-grid{display:flex;justify-content:space-between;gap:36px;flex-wrap:wrap;margin-bottom:32px}
   .foot-brand{max-width:320px}
-  .fb-name{font-family:var(--serif);color:#fff;font-size:1.34rem;letter-spacing:.03em;margin-bottom:10px}
+  .fb-name{font-family:var(--serif);color:#fff;font-size:1.34rem;letter-spacing:.02em;margin-bottom:10px}
   .foot-brand .pay{font-family:var(--serif);font-style:italic;color:var(--teal);font-size:1.12rem}
-  footer h4{font-family:var(--caps);color:#fff;margin-bottom:14px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+  footer h4{font-family:var(--caps);color:#fff;margin-bottom:14px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
   footer p{font-size:.92rem;margin-bottom:6px}
   footer a{color:#9ec4c2}
   footer a:hover{color:#fff}
   .foot-bottom{border-top:1px solid rgba(255,255,255,.13);padding-top:20px;font-size:.83rem;color:#7fa09e;text-align:center}
+  .foot-bottom a{color:#9ec4c2;text-decoration:underline}
+
+  #cookienotice{display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:200;background:var(--charcoal);color:#e7eeed;border-radius:var(--radius);box-shadow:0 10px 30px rgba(0,0,0,.25);padding:16px 20px;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap;max-width:900px;margin:0 auto;font-size:.92rem}
+  #cookienotice a{color:#9ed7d4;text-decoration:underline}
+  #cookienotice .btn{padding:9px 18px}
 
   @media(max-width:860px){
     .menu{display:none}
     .burger{display:block}
-    .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+    .hero-grid,.contact-grid{grid-template-columns:1fr}
     .grid3{grid-template-columns:1fr}
     section{padding:58px 0}
-    .hero-art{max-width:420px;margin:0 auto}
-    .menu.open{display:flex;position:absolute;top:82px;left:0;right:0;flex-direction:column;background:var(--white);padding:20px 24px;border-bottom:1px solid var(--line);gap:18px}
+    .menu.open{display:flex;position:absolute;top:94px;left:0;right:0;flex-direction:column;background:var(--white);padding:20px 24px;border-bottom:1px solid var(--line);gap:18px}
   }
 </style>
 </head>
@@ -164,7 +159,6 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
@@ -198,24 +192,20 @@
   <small>Prime visite e preventivi gratuiti · <b>0574 679 383</b> · <b>339 565 7706</b></small>
 </div>
 
-<!-- STUDIO -->
 <section id="studio" class="alt">
   <div class="wrap about-grid">
-    <div>
-      <span class="eyebrow">Lo studio</span>
-      <h2 class="sec">Un rapporto di fiducia,<br>paziente dopo paziente</h2>
-      <p class="lead" style="margin-top:16px">La Dr.ssa Sabrina Renzo — odontoiatra e protesista dentale, Dottore di Ricerca presso la Scuola Pediatrica dell'Università di Firenze — ha scelto di restare un punto di riferimento per la sua comunità. Conosciamo te e la tua famiglia, ricordiamo la tua storia e costruiamo insieme la cura più adatta, sempre nel tuo interesse.</p>
-      <ul class="checklist">
-        <li><b>Ti ascoltiamo davvero:</b>&nbsp;capiamo il problema prima di proporre la soluzione.</li>
-        <li><b>Tutto spiegato con chiarezza,</b>&nbsp;con un preventivo trasparente e senza sorprese.</li>
-        <li><b>Delicatezza con grandi e piccoli,</b>&nbsp;ideale anche per chi ha paura del dentista.</li>
-        <li><b>Una dentista di fiducia per tutta la famiglia,</b>&nbsp;dai bambini agli anziani.</li>
-      </ul>
-    </div>
+    <span class="eyebrow">Lo studio</span>
+    <h2 class="sec">Un rapporto di fiducia,<br>paziente dopo paziente</h2>
+    <p class="lead" style="margin-top:16px">La Dr.ssa Sabrina Renzo — odontoiatra e protesista dentale, Dottore di Ricerca presso la Scuola Pediatrica dell'Università di Firenze — è un punto di riferimento per il territorio da oltre dieci anni. Conosciamo te e la tua famiglia, ricordiamo la tua storia e costruiamo insieme la cura più adatta, sempre nel tuo interesse.</p>
+    <ul class="checklist">
+      <li><b>Ti ascoltiamo davvero:</b>&nbsp;capiamo il problema prima di proporre la soluzione.</li>
+      <li><b>Tutto spiegato con chiarezza,</b>&nbsp;con un preventivo trasparente e senza sorprese.</li>
+      <li><b>Delicatezza con grandi e piccoli,</b>&nbsp;ideale anche per chi ha paura del dentista.</li>
+      <li><b>Una dentista di fiducia per tutta la famiglia,</b>&nbsp;dai bambini agli anziani.</li>
+    </ul>
   </div>
 </section>
 
-<!-- SERVIZI -->
 <section id="servizi">
   <div class="wrap">
     <span class="eyebrow">Cosa offriamo</span>
@@ -235,7 +225,6 @@
   </div>
 </section>
 
-<!-- RECENSIONI -->
 <section id="recensioni" class="alt">
   <div class="wrap">
     <span class="eyebrow">Dicono di noi</span>
@@ -255,7 +244,6 @@
   </div>
 </section>
 
-<!-- CONTATTI -->
 <section id="contatti">
   <div class="wrap">
     <span class="eyebrow">Dove siamo</span>
@@ -277,7 +265,14 @@
         </div>
       </div>
       <div>
-        <iframe class="map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Studio%20Odontoiatrico%20Dott.ssa%20Renzo%20Sabrina%20Via%20A.Selva%20361%20Agliana&output=embed"></iframe>
+        <div id="mapwrap">
+          <div class="mapph">
+            <div>
+              <p>La mappa è fornita da Google. Per tutelare la tua privacy si carica solo se la attivi tu.</p>
+              <button type="button" class="btn" onclick="loadMap()">Mostra la mappa</button>
+            </div>
+          </div>
+        </div>
         <a href="https://www.google.com/maps/search/?api=1&query=Studio+Odontoiatrico+Dott.ssa+Renzo+Sabrina+Agliana" target="_blank" rel="noopener" class="btn ghost" style="margin-top:16px">Apri su Google Maps e leggi le recensioni →</a>
       </div>
     </div>
@@ -302,4 +297,24 @@
         <h4>Seguici</h4>
         <p><a href="https://www.instagram.com/sabrina_renzo/" target="_blank" rel="noopener">Instagram</a></p>
         <p><a href="https://www.facebook.com/studiodentisticoagliana/" target="_blank" rel="noopener">Facebook</a></p>
-        <p><a href="https://www.sabrinarenzo.com" target="_blank" rel="noop
+      </div>
+    </div>
+    <div class="foot-bottom">© <span id="y"></span> Studio Odontoiatrico Dr.ssa Sabrina Renzo · Via A. Selva 361, Agliana (PT) · Tutti i diritti riservati · <a href="privacy.html">Privacy e cookie</a></div>
+  </div>
+</footer>
+
+<div id="cookienotice">
+  <span>Questo sito non usa cookie di profilazione. La mappa di Google viene caricata solo se la attivi tu. Maggiori informazioni nella <a href="privacy.html">Privacy e cookie</a>.</span>
+  <button class="btn" onclick="dismissCookie()">Ho capito</button>
+</div>
+
+<script>
+  document.getElementById('y').textContent=new Date().getFullYear();
+  function loadMap(){
+    document.getElementById('mapwrap').innerHTML='<iframe class="map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Studio%20Odontoiatrico%20Dott.ssa%20Renzo%20Sabrina%20Via%20A.Selva%20361%20Agliana&output=embed"></iframe>';
+  }
+  function dismissCookie(){try{localStorage.setItem('ck','1');}catch(e){}document.getElementById('cookienotice').style.display='none';}
+  try{if(localStorage.getItem('ck')!=='1'){document.getElementById('cookienotice').style.display='flex';}}catch(e){document.getElementById('cookienotice').style.display='flex';}
+</script>
+</body>
+</html>
