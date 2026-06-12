@@ -86,7 +86,11 @@
   .card h3{font-size:1.32rem;margin-bottom:7px;font-weight:600}
   .card p{color:var(--muted);font-size:.95rem}
 
-  .about-grid{max-width:860px}
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .about-text{min-width:0}
+  .about-media img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover}
+  .impl-media{width:100%;max-height:330px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow);margin:32px 0 6px}
+  .welcome-img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow);max-height:460px;object-fit:cover}
   .checklist{list-style:none;margin-top:24px;display:grid;gap:14px}
   .checklist li{display:flex;gap:13px;align-items:flex-start;color:var(--muted)}
   .checklist li b{color:var(--ink)}
@@ -145,7 +149,7 @@
   @media(max-width:860px){
     .menu{display:none}
     .burger{display:block}
-    .hero-grid,.contact-grid,.impl-grid{grid-template-columns:1fr}
+    .hero-grid,.contact-grid,.impl-grid,.about-grid{grid-template-columns:1fr}
     .grid3{grid-template-columns:1fr}
     section{padding:58px 0}
     .menu.open{display:flex;position:absolute;top:94px;left:0;right:0;flex-direction:column;background:var(--white);padding:20px 24px;border-bottom:1px solid var(--line);gap:18px}
@@ -207,16 +211,20 @@
 </div>
 
 <section id="studio" class="alt">
+  <div class="wrap" style="margin-bottom:44px"><img class="welcome-img" loading="lazy" src="sala-aspetto.jpg" alt="La sala d'attesa dello Studio Odontoiatrico Sabrina Renzo"></div>
   <div class="wrap about-grid">
-    <span class="eyebrow">Lo studio</span>
-    <h2 class="sec">Un rapporto di fiducia,<br>paziente dopo paziente</h2>
-    <p class="lead" style="margin-top:16px">La Dr.ssa Sabrina Renzo — odontoiatra e protesista dentale, Dottore di Ricerca presso la Scuola Pediatrica dell'Università di Firenze — è un punto di riferimento per il territorio da oltre dieci anni. Conosciamo te e la tua famiglia, ricordiamo la tua storia e costruiamo insieme la cura più adatta, sempre nel tuo interesse: dalla semplice igiene fino alle riabilitazioni implantari più impegnative.</p>
-    <ul class="checklist">
-      <li><b>Ti ascoltiamo davvero:</b>&nbsp;capiamo il problema prima di proporre la soluzione.</li>
-      <li><b>Tutto spiegato con chiarezza,</b>&nbsp;con un preventivo trasparente e senza sorprese.</li>
-      <li><b>Delicatezza con grandi e piccoli,</b>&nbsp;ideale anche per chi ha paura del dentista.</li>
-      <li><b>Competenza per i casi complessi,</b>&nbsp;con l'implantologia per ridare denti fissi e funzionali.</li>
-    </ul>
+    <div class="about-text">
+      <span class="eyebrow">Lo studio</span>
+      <h2 class="sec">Un rapporto di fiducia,<br>paziente dopo paziente</h2>
+      <p class="lead" style="margin-top:16px">La Dr.ssa Sabrina Renzo — odontoiatra e protesista dentale, Dottore di Ricerca presso la Scuola Pediatrica dell'Università di Firenze — è un punto di riferimento per il territorio da oltre dieci anni. Conosciamo te e la tua famiglia, ricordiamo la tua storia e costruiamo insieme la cura più adatta, sempre nel tuo interesse: dalla semplice igiene fino alle riabilitazioni implantari più impegnative.</p>
+      <ul class="checklist">
+        <li><b>Ti ascoltiamo davvero:</b>&nbsp;capiamo il problema prima di proporre la soluzione.</li>
+        <li><b>Tutto spiegato con chiarezza,</b>&nbsp;con un preventivo trasparente e senza sorprese.</li>
+        <li><b>Delicatezza con grandi e piccoli,</b>&nbsp;ideale anche per chi ha paura del dentista.</li>
+        <li><b>Competenza per i casi complessi,</b>&nbsp;con l'implantologia per ridare denti fissi e funzionali.</li>
+      </ul>
+    </div>
+    <div class="about-media"><img loading="lazy" src="sala-verde.jpg" alt="Sala operativa dello Studio Odontoiatrico Sabrina Renzo"></div>
   </div>
 </section>
 
