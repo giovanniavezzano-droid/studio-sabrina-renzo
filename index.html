@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr.ssa Sabrina Renzo — Studio Odontoiatrico · Agliana (PT)</title>
-<meta name="description" content="Studio Odontoiatrico Dr.ssa Sabrina Renzo, a Ferruccia di Agliana (PT). Il mio impegno, il tuo sorriso: un dentista di fiducia che ti conosce e ti ascolta. Prevenzione, ortodonzia, implantologia, protesi e odontoiatria infantile. Prime visite e preventivi gratuiti.">
+<meta name="description" content="Studio Odontoiatrico Dr.ssa Sabrina Renzo, a Ferruccia di Agliana (PT). Il calore di un dentista di paese e la competenza dell'implantologia avanzata: impianti, anche computer-guidati, protesi in 24 ore, ortodonzia e odontoiatria infantile. Prime visite e preventivi gratuiti.">
 <style>
   :root{
     --teal:#6e9c9b;
@@ -41,19 +41,22 @@
   .brand img{height:70px;width:auto}
   .brand .wm b{display:block;font-family:var(--serif);font-weight:600;font-size:1.18rem;color:var(--charcoal);line-height:1;letter-spacing:.02em}
   .brand .wm span{font-family:var(--caps);font-size:.62rem;color:var(--teal-dark);letter-spacing:.24em;text-transform:uppercase}
-  .menu{display:flex;gap:28px;align-items:center}
-  .menu a{font-family:var(--caps);color:var(--charcoal);font-weight:500;font-size:.86rem;letter-spacing:.04em;transition:color .2s}
+  .menu{display:flex;gap:24px;align-items:center}
+  .menu a{font-family:var(--caps);color:var(--charcoal);font-weight:500;font-size:.85rem;letter-spacing:.03em;transition:color .2s}
   .menu a:hover{color:var(--teal-dark)}
   .btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;padding:12px 22px;border-radius:999px;font-family:var(--caps);font-weight:600;letter-spacing:.03em;transition:background .2s,transform .15s;border:none;cursor:pointer;font-size:.86rem}
   .btn:hover{background:var(--teal-dark);transform:translateY(-1px)}
   .btn.ghost{background:transparent;color:var(--teal-dark);border:1.5px solid var(--teal)}
   .btn.ghost:hover{background:var(--teal);color:#fff}
+  .btn.light{background:#fff;color:var(--teal-deep)}
+  .btn.light:hover{background:#eef4f3;color:var(--teal-deep)}
   .burger{display:none;font-size:1.6rem;background:none;border:none;cursor:pointer;color:var(--charcoal)}
 
   .hero{padding-top:64px}
   .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center}
-  .hero h1{font-size:clamp(2.4rem,5vw,3.6rem);margin-bottom:18px;font-weight:600}
+  .hero h1{font-size:clamp(2.4rem,5vw,3.6rem);margin-bottom:6px;font-weight:600}
   .hero h1 em{font-style:italic;color:var(--teal-dark)}
+  .hero .dual{font-family:var(--serif);font-style:italic;color:var(--teal-dark);font-size:1.3rem;margin-bottom:18px}
   .hero p{margin-bottom:28px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
   .badges{display:flex;gap:32px;margin-top:34px;flex-wrap:wrap}
@@ -88,6 +91,15 @@
   .checklist li{display:flex;gap:13px;align-items:flex-start;color:var(--muted)}
   .checklist li b{color:var(--ink)}
   .checklist li::before{content:"✓";color:var(--teal);font-weight:800;flex:none}
+
+  /* Implantologia */
+  .impl{background:linear-gradient(160deg,var(--soft),#dbeae8)}
+  .impl .inner{max-width:980px;margin:0 auto}
+  .impl-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:36px 0 28px}
+  .impl-item{background:rgba(255,255,255,.7);border:1px solid #d3e6e3;border-radius:var(--radius);padding:20px 22px 20px 52px;position:relative}
+  .impl-item::before{content:"✓";position:absolute;left:20px;top:19px;color:var(--teal-dark);font-weight:800;font-size:1.15rem}
+  .impl-item b{display:block;font-family:var(--serif);font-size:1.12rem;color:var(--charcoal);margin-bottom:3px}
+  .impl-item span{color:var(--muted);font-size:.95rem}
 
   .rev-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:14px}
   .rev-pill{background:var(--soft);color:var(--teal-deep);font-family:var(--caps);font-weight:600;padding:8px 16px;border-radius:999px;font-size:.86rem;letter-spacing:.03em;display:inline-flex;align-items:center;gap:8px}
@@ -133,7 +145,7 @@
   @media(max-width:860px){
     .menu{display:none}
     .burger{display:block}
-    .hero-grid,.contact-grid{grid-template-columns:1fr}
+    .hero-grid,.contact-grid,.impl-grid{grid-template-columns:1fr}
     .grid3{grid-template-columns:1fr}
     section{padding:58px 0}
     .menu.open{display:flex;position:absolute;top:94px;left:0;right:0;flex-direction:column;background:var(--white);padding:20px 24px;border-bottom:1px solid var(--line);gap:18px}
@@ -150,6 +162,7 @@
     </a>
     <nav class="menu" id="menu">
       <a href="#studio">Lo studio</a>
+      <a href="#implantologia">Implantologia</a>
       <a href="#servizi">Servizi</a>
       <a href="#recensioni">Recensioni</a>
       <a href="#contatti">Dove siamo</a>
@@ -164,10 +177,11 @@
     <div>
       <span class="eyebrow">Studio Odontoiatrico · Ferruccia di Agliana (PT)</span>
       <h1>Il mio impegno,<br><em>il tuo sorriso.</em></h1>
-      <p class="lead">Da oltre dieci anni la Dr.ssa Sabrina Renzo cura le famiglie del territorio con la dedizione di un dentista di paese: ti ascolta, ti spiega ogni cosa con calma e propone solo ciò che serve davvero a te. Qui non sei un numero — sei una persona di cui prendersi cura.</p>
+      <p class="dual">Il calore di un dentista di paese, la competenza dell'implantologia avanzata.</p>
+      <p class="lead">Da oltre dieci anni la Dr.ssa Sabrina Renzo cura le famiglie del territorio: ti ascolta, ti spiega ogni cosa con calma e propone solo ciò che serve davvero a te. Qui non sei un numero — sei una persona di cui prendersi cura. E quando serve di più, trovi anche l'implantologia per tornare a sorridere.</p>
       <div class="hero-cta">
         <a href="tel:+390574679383" class="btn">📞 0574 679 383</a>
-        <a href="#servizi" class="btn ghost">Scopri i servizi</a>
+        <a href="#implantologia" class="btn ghost">Scopri l'implantologia</a>
       </div>
       <div class="badges">
         <div class="badge"><b>10+</b><span>anni al servizio<br>del territorio</span></div>
@@ -179,7 +193,7 @@
       <div class="hc-stars">★★★★★</div>
       <div class="hc-rate">185 recensioni su Google</div>
       <hr>
-      <div class="hc-item">Prime visite e preventivi gratuiti</div>
+      <div class="hc-item">Implantologia, anche computer-guidata</div>
       <div class="hc-item">Dentista di fiducia per tutta la famiglia</div>
       <div class="hc-item">Delicatezza anche con chi ha paura del dentista</div>
       <a href="tel:+390574679383" class="btn">📞 Chiama lo 0574 679 383</a>
@@ -196,13 +210,28 @@
   <div class="wrap about-grid">
     <span class="eyebrow">Lo studio</span>
     <h2 class="sec">Un rapporto di fiducia,<br>paziente dopo paziente</h2>
-    <p class="lead" style="margin-top:16px">La Dr.ssa Sabrina Renzo — odontoiatra e protesista dentale, Dottore di Ricerca presso la Scuola Pediatrica dell'Università di Firenze — è un punto di riferimento per il territorio da oltre dieci anni. Conosciamo te e la tua famiglia, ricordiamo la tua storia e costruiamo insieme la cura più adatta, sempre nel tuo interesse.</p>
+    <p class="lead" style="margin-top:16px">La Dr.ssa Sabrina Renzo — odontoiatra e protesista dentale, Dottore di Ricerca presso la Scuola Pediatrica dell'Università di Firenze — è un punto di riferimento per il territorio da oltre dieci anni. Conosciamo te e la tua famiglia, ricordiamo la tua storia e costruiamo insieme la cura più adatta, sempre nel tuo interesse: dalla semplice igiene fino alle riabilitazioni implantari più impegnative.</p>
     <ul class="checklist">
       <li><b>Ti ascoltiamo davvero:</b>&nbsp;capiamo il problema prima di proporre la soluzione.</li>
       <li><b>Tutto spiegato con chiarezza,</b>&nbsp;con un preventivo trasparente e senza sorprese.</li>
       <li><b>Delicatezza con grandi e piccoli,</b>&nbsp;ideale anche per chi ha paura del dentista.</li>
-      <li><b>Una dentista di fiducia per tutta la famiglia,</b>&nbsp;dai bambini agli anziani.</li>
+      <li><b>Competenza per i casi complessi,</b>&nbsp;con l'implantologia per ridare denti fissi e funzionali.</li>
     </ul>
+  </div>
+</section>
+
+<section id="implantologia" class="impl">
+  <div class="wrap inner">
+    <span class="eyebrow">La nostra eccellenza</span>
+    <h2 class="sec">Implantologia: tornare a sorridere e a masticare</h2>
+    <p class="lead">Accanto alle cure di famiglia di ogni giorno, lo studio è un punto di riferimento per l'implantologia. Ridiamo un sorriso fisso e naturale a chi ha perso uno o più denti, con soluzioni pianificate al computer: sicure, durature e su misura della tua bocca.</p>
+    <div class="impl-grid">
+      <div class="impl-item"><b>Impianti singoli e multipli</b><span>Dal singolo dente all'intera arcata, per tornare a mangiare con sicurezza.</span></div>
+      <div class="impl-item"><b>Implantologia computer-guidata</b><span>Intervento pianificato in 3D: più preciso, più rapido e meno invasivo.</span></div>
+      <div class="impl-item"><b>Protesi anche in 24 ore</b><span>Riabilitazione protesica immediata: non resti senza denti durante le cure.</span></div>
+      <div class="impl-item"><b>Pianificazione con RX 3D (CBCT)</b><span>Ogni impianto è studiato sulla tua anatomia, in piena sicurezza.</span></div>
+    </div>
+    <a href="tel:+390574679383" class="btn">📞 Prenota una valutazione gratuita</a>
   </div>
 </section>
 
@@ -212,10 +241,10 @@
     <h2 class="sec">I nostri servizi</h2>
     <p class="lead">Cure complete in un unico studio, eseguite nel pieno rispetto delle norme igienico-sanitarie.</p>
     <div class="grid3">
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v8M12 11l-3 9M12 11l3 9"/><circle cx="12" cy="3" r="1.5"/></svg></div><h3>Implantologia</h3><p>Impianti singoli e multipli, anche con tecnica computer-guidata, per denti fissi e duraturi.</p></div>
       <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8 2 6 5 6 9c0 4 1 6 2 9 .6 1.8 1 3 2 3s1-2 2-5c0-1 .5-1.5 0 0 1 3 1 5 2 5s1.4-1.2 2-3c1-3 2-5 2-9 0-4-2-7-6-7z"/></svg></div><h3>Prevenzione e igiene</h3><p>Sedute di igiene professionale e controlli periodici per mantenere denti e gengive sani nel tempo.</p></div>
       <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="10" r="2.5"/><circle cx="16" cy="9" r="2"/><path d="M4 19c0-3 2-5 5-5s5 2 5 5M14 19c0-2 1.5-4 3.5-4S21 17 21 19"/></svg></div><h3>Odontoiatria infantile</h3><p>La specialità della dottoressa: accoglienza dedicata ai bambini, per visite serene e senza paura.</p></div>
       <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="9" width="16" height="6" rx="2"/><path d="M8 9V7M12 9V7M16 9V7M8 15v2M12 15v2M16 15v2"/></svg></div><h3>Ortodonzia</h3><p>Ortodonzia intercettiva pediatrica, per adulti e allineatori trasparenti (ortodonzia invisibile).</p></div>
-      <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v8M12 11l-3 9M12 11l3 9"/><circle cx="12" cy="3" r="1.5"/></svg></div><h3>Implantologia</h3><p>Sostituzione dei denti mancanti con impianti sicuri e duraturi, anche con tecnica computer guidata.</p></div>
       <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4h10l-1 7c-.5 3-2 5-4 5s-3.5-2-4-5L7 4z"/><path d="M5 4h14"/></svg></div><h3>Protesi fissa e mobile</h3><p>Protesi fissa, mobile e su impianti — con possibilità di riabilitazione protesica in 24 ore.</p></div>
       <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2 4 4 .5-3 3 .8 4.5L12 16l-3.8 2 .8-4.5-3-3 4-.5z"/></svg></div><h3>Estetica del sorriso</h3><p>Sbiancamento dentale professionale e faccette estetiche per un sorriso luminoso e naturale.</p></div>
       <div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4C9 4 7 6 7 9c0 4 2 7 5 11 3-4 5-7 5-11 0-3-2-5-5-5z"/><circle cx="12" cy="9" r="1.6"/></svg></div><h3>Conservativa ed endodonzia</h3><p>Otturazioni estetiche, cura delle carie e trattamenti canalari per salvare i denti naturali.</p></div>
@@ -285,7 +314,7 @@
       <div class="foot-brand">
         <div class="fb-name">Sabrina Renzo</div>
         <p class="pay">Il mio impegno, il tuo sorriso</p>
-        <p style="color:#9ec4c2;margin-top:8px">Odontoiatra e protesista dentale, a Ferruccia di Agliana.</p>
+        <p style="color:#9ec4c2;margin-top:8px">Odontoiatra e protesista dentale, a Ferruccia di Agliana. Cure di famiglia e implantologia.</p>
       </div>
       <div>
         <h4>Contatti</h4>
